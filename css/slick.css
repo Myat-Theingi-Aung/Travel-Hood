@@ -1,0 +1,276 @@
+/* Slider */
+.slick-slider {
+
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.slick-list {
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* custom arrow */
+.upper {
+  position: relative;
+}
+
+span.arrow.prev {
+  display: block;
+  position: absolute;
+  top: 47%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: url('../img/top/img_arrow-left.png') no-repeat;
+}
+
+span.arrow.prev {
+  left: 0px;
+}
+
+span.arrow.next {
+  display: block;
+  position: absolute;
+  top: 47%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: url('../img/top/img_arrow-rigth.png') no-repeat;
+}
+
+span.arrow.next {
+  right: -2.5%;
+}
+
+/* custom dots */
+.slick-dots {
+  position: absolute;
+  bottom: -49px;
+  left: 47.5%;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 8px;
+  background-color: #CBCCCD;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active {
+  background-color: #666666;
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+@media screen and (min-width:768px) and (max-width:1160px) {
+
+  /* custom arrow */
+  span.arrow.prev {
+    top: 47%;
+    width: 6.51vw;
+    height: 6.51vw;
+    background: url('../img/top/img_arrow_left_isp.png') no-repeat;
+  }
+
+  span.arrow.prev {
+    left: 0vw;
+  }
+
+  span.arrow.next {
+    display: block;
+    top: 47%;
+    z-index: 1;
+    width: 6.51vw;
+    height: 6.51vw;
+    background: url('../img/top/img_arrow_right_isp.png') no-repeat;
+  }
+
+  span.arrow.next {
+    right: -4.6%;
+  }
+
+  /* custom dots */
+  .slick-dots {
+    position: absolute;
+    bottom: -6.12vw;
+    left: 42.5%;
+  }
+
+  .slick-dots li {
+    display: inline-block;
+    width: 1.302vw;
+    height: 1.302vw;
+    margin-right: 1.042vw;
+    background-color: #CBCCCD;
+    border-radius: 50%;
+  }
+
+  .slick-dots li.slick-active {
+    background-color: #666666;
+  }
+
+  .slick-dots li button {
+    display: none;
+  }
+}
+
+@media screen and (max-width:767.9px) {
+
+  /* custom arrow */
+  span.arrow.prev {
+    top: 47%;
+    width: 7.813vw;
+    background: url('../img/top/img_arrow_left_isp.png') no-repeat;
+  }
+
+  span.arrow.prev {
+    left: 0vw;
+  }
+
+  span.arrow.next {
+    display: block;
+    top: 47%;
+    z-index: 1;
+    width: 7.813vw;
+    background: url('../img/top/img_arrow_right_isp.png') no-repeat;
+  }
+
+  span.arrow.next {
+    right: -4.6%;
+  }
+
+  /* custom dots */
+  .slick-dots {
+    position: absolute;
+    bottom: -7.344vw;
+    left: 42.5%;
+  }
+
+  .slick-dots li {
+    display: inline-block;
+    width: 1.563vw;
+    height: 1.563vw;
+    margin-right: 1.25vw;
+    background-color: #CBCCCD;
+    border-radius: 50%;
+  }
+
+  .slick-dots li.slick-active {
+    background-color: #666666;
+  }
+
+  .slick-dots li button {
+    display: none;
+  }
+}
